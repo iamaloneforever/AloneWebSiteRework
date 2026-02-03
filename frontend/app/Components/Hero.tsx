@@ -63,7 +63,7 @@ export default function Hero() {
 
   })
   return (
-    <div className="grid grid-cols-1 gap-20 lg:grid-cols-2 w-screen">
+    <div className="grid grid-cols-1 gap-20 lg:grid-cols-2 w-screen h-screen">
       <div className="w-full box order-2 flex justify-center items-center flex-col space-y-4">
         <h1 className="text-5xl title">Alone</h1>
         <p className="text-gray-600 des">Create Your Dreams !!</p>
@@ -146,7 +146,7 @@ export default function Hero() {
       </div>
 
       <div className="w-full hidden  lg:flex items-center justify-center">
-        <Image src={"/heroMountain.png"} height={30} width={300} alt='Hero Image That Present A Mountain' className='Hero border-4 border-primary' />
+        <Image src={"/heroMountain.png"} height={30} width={300} placeholder="blur" blurDataURL="data:..." alt='Hero Image That Present A Mountain' className='Hero border-4 border-primary' />
       </div>
     </div>
   )
