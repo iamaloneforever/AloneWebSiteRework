@@ -1,10 +1,8 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
 import { motion, useAnimationControls } from "motion/react"
 import { SplitText } from "gsap/all"
-gsap.registerPlugin(ScrollTrigger, SplitText)
 
 export const AboutMe = () => {
   const controls = useAnimationControls()
@@ -17,7 +15,7 @@ export const AboutMe = () => {
         trigger: ".section",
         start: "top 70%",
         end: "center center",
-        toggleActions: "play none reverse none",
+        toggleActions: "play none none none",
       },
     })
 
@@ -38,7 +36,7 @@ export const AboutMe = () => {
   })
 
   return (
-    <div className="section h-screen w-screen">
+    <div className="section flex items-center h-screen w-screen">
       <div className="grid gap-10 lg:grid-cols-2">
 
 

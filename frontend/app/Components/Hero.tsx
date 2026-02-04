@@ -27,7 +27,6 @@ import { SplitText } from 'gsap/all';
 import { useMediaQuery } from 'react-responsive';
 import { motion } from 'motion/react';
 
-gsap.registerPlugin(SplitText)
 export default function Hero() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" })
   useGSAP(() => {
@@ -118,7 +117,15 @@ export default function Hero() {
           </Dialog>
 
           {/* Flip Button */}
-          <FlipButton>
+          <FlipButton
+            onClick={() => {
+              gsap.to(window, {
+                duration: 1,
+                scrollTo: "#Demos",
+                ease: "power3.out",
+              });
+            }}
+          >
             <FlipButtonFront
               className="
                 w-full sm:w-52 h-10

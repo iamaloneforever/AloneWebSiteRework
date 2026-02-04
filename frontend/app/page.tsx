@@ -3,7 +3,10 @@
 import Hero from "./Components/Hero";
 import Snowfall from 'react-snowfall'
 import { AboutMe } from "./Components/AboutMe";
-
+import { Demos } from "./Components/Demos";
+import { ScrollToPlugin, ScrollTrigger, SplitText } from "gsap/all";
+import gsap from "gsap";
+gsap.registerPlugin(SplitText, ScrollToPlugin, ScrollTrigger)
 export default function Home() {
   return (
     <div className="relative min-h-screen w-screen bg-zinc-50 dark:bg-black font-sans overflow-hidden">
@@ -26,6 +29,7 @@ export default function Home() {
       <div className="relative z-10 flex flex-col items-center justify-center">
         <Hero />
         <AboutMe />
+        <Demos />
       </div>
 
     </div>
