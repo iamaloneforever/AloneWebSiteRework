@@ -6,6 +6,7 @@ import { AboutMe } from "./Components/AboutMe";
 import { Demos } from "./Components/Demos";
 import { ScrollToPlugin, ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
+import Skills from "./Components/Skills";
 gsap.registerPlugin(SplitText, ScrollToPlugin, ScrollTrigger)
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <div className="relative z-10 flex flex-col items-center justify-center">
         <Hero />
         <AboutMe />
+        <Skills />
         <Demos />
       </div>
 
