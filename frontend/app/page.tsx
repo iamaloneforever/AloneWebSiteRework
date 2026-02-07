@@ -7,6 +7,7 @@ import { Demos } from "./Components/Demos";
 import { ScrollToPlugin, ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
 import Skills from "./Components/Skills";
+import GitHubStats from "./Components/GitHubStats";
 gsap.registerPlugin(SplitText, ScrollToPlugin, ScrollTrigger)
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <AboutMe />
         <Skills />
         <Demos />
+        <GitHubStats />
       </div>
 
     </div>
