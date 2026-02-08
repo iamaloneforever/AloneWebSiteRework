@@ -9,6 +9,8 @@ import { FaGithub } from "react-icons/fa"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { SplitText } from "gsap/all"
+import { Spinner } from "@/components/ui/spinner"
+import { FaRegFaceSadTear } from "react-icons/fa6"
 type Repo = {
   id: number
   name: string
@@ -93,8 +95,19 @@ export default function GitHubStats() {
     })
 
   }, [data, mounted])
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error: {error}</p>
+  if (loading) return (
+    <div className="h-screen flex flex-col items-center justify-center gap-10">
+      <Spinner className="size-15" />
+      <h1 className="text-xl">Loading Please Wait :)</h1>
+    </div>
+  )
+  if (error) return (
+    <div className="h-screen flex flex-col items-center justify-center gap-10">
+      <FaRegFaceSadTear size={100} />
+      <h1 className="text-xl">An Error Apeared ( {error} )</h1>
+    </div>
+
+  )
   if (!data) return null
 
 

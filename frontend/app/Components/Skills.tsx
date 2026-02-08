@@ -111,11 +111,11 @@ export default function Skills() {
 
                 <motion.div
                   whileHover={{
-                    scale: 1.2, y: -20,
+                    scale: 1.1, y: -20,
                     boxShadow: "10px 10px 6px rgba(0, 0, 0, 0.5)"
                   }}
                   whileTap={{
-                    scale: 1.1, y: -10,
+                    scale: 1.05, y: -10,
                     boxShadow: "10px 10px 6px rgba(0, 0, 0, 0.6)"
                   }}
                   className="flex gap-10 border-2 p-10 rounded-xl items-center justify-center">

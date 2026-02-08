@@ -26,6 +26,7 @@ import gsap from 'gsap';
 import { SplitText } from 'gsap/all';
 import { useMediaQuery } from 'react-responsive';
 import { motion } from 'motion/react';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 export default function Hero() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" })
@@ -94,20 +95,38 @@ export default function Hero() {
                 <DialogHeader>
                   <DialogTitle className="text-lg">Contact Me :)</DialogTitle>
                 </DialogHeader>
-
                 <p className="py-4 text-sm text-muted-foreground">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                  quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quos.
+                  Feel free to contact me! 🕑 Available from 2 PM to 10 PM Iran Time.
                 </p>
-                <DialogFooter className='flex gap-10'>
-                  <motion.div whileHover={{ scale: 1.2, rotate: 15 }}>
-                    <FaTelegram size={30} color='#0088CC' />
-                  </motion.div>
-                  <motion.div whileHover={{ scale: 1.2, rotate: -15 }}>
+                <DialogFooter className="flex gap-10">
+                  {/* Telegram */}
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <motion.a
+                        href="https://t.me/lonely_is_me"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.2, rotate: 15 }}
+                      >
+                        <FaTelegram size={30} color="#0088CC" />
+                      </motion.a>
+                    </TooltipTrigger>
+                    <TooltipContent>@lonely_is_me</TooltipContent>
+                  </Tooltip>
+                  {/* Email */}
+                  <Tooltip>
+                    <TooltipTrigger>
 
-                    <CiMail size={30} />
-                  </motion.div>
+                      <motion.a
+                        href="mailto:amirhoseinsharify90@email.com"
+                        whileHover={{ scale: 1.2, rotate: -15 }}
+                      >
+                        <CiMail size={30} />
+                      </motion.a>
+                    </TooltipTrigger>
+                    <TooltipContent>amirhoseinsharify90@email.com</TooltipContent>
+                  </Tooltip>
+
                 </DialogFooter>
                 <DialogClose className="absolute top-4 right-4">
                   <span className="sr-only">Close</span>

@@ -34,6 +34,9 @@ export default function Home() {
         <Skills />
         <Demos />
         <GitHubStats />
+        <div>
+          <h1 className="text-sm text-gray-600 font-bold">Made With Love , 2025 Alone</h1>
+        </div>
       </div>
 
     </div>
