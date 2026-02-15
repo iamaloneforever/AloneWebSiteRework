@@ -130,11 +130,11 @@ export default function GitHubStats() {
           <p className="text-zinc-400  section1text text-center font-vazir">{data.profile.bio}</p>
 
           <FlipButton>
-            <FlipButtonFront className="w-full sm:w-52 h-10 flex items-center justify-center bg-accent text-accent-foreground text-sm font-medium">
+            <FlipButtonFront className="w-full sm:w-52 h-10 flex items-center justify-center bg-accent text-accent-foreground text-sm py-4 px-10 font-medium">
               Visit GitHub
               <FaGithub className="ml-4" size={20} />
             </FlipButtonFront>
-            <FlipButtonBack className="w-full sm:w-52 h-10 flex items-center justify-center bg-primary text-primary-foreground text-sm font-medium">
+            <FlipButtonBack className="w-full sm:w-52 h-10 flex items-center justify-center bg-primary text-primary-foreground px-10 py-4 text-sm font-medium">
               <a href={data.profile.html_url} target="_blank" rel="noopener noreferrer">
                 Go Now
               </a>
