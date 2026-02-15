@@ -129,7 +129,6 @@ export default function GitHubStats() {
           <h1 className="text-2xl section1text font-bold">{data.profile.name}</h1>
           <p className="text-zinc-400  section1text text-center font-vazir">{data.profile.bio}</p>
               <a href={data.profile.html_url} target="_blank" rel="noopener noreferrer">
-                Go Now
               
           <FlipButton>
             <FlipButtonFront className="w-full sm:w-52 h-10 flex items-center justify-center bg-accent text-accent-foreground text-sm py-4 px-10 font-medium">
