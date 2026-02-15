@@ -128,18 +128,19 @@ export default function GitHubStats() {
           />
           <h1 className="text-2xl section1text font-bold">{data.profile.name}</h1>
           <p className="text-zinc-400  section1text text-center font-vazir">{data.profile.bio}</p>
-
+              <a href={data.profile.html_url} target="_blank" rel="noopener noreferrer">
+                Go Now
+              
           <FlipButton>
             <FlipButtonFront className="w-full sm:w-52 h-10 flex items-center justify-center bg-accent text-accent-foreground text-sm py-4 px-10 font-medium">
               Visit GitHub
               <FaGithub className="ml-4" size={20} />
             </FlipButtonFront>
             <FlipButtonBack className="w-full sm:w-52 h-10 flex items-center justify-center bg-primary text-primary-foreground px-10 py-4 text-sm font-medium">
-              <a href={data.profile.html_url} target="_blank" rel="noopener noreferrer">
-                Go Now
-              </a>
+              
             </FlipButtonBack>
           </FlipButton>
+              </a>
         </div>
         <div className="flex flex-col items-center GSection2 justify-center">
           <h1 className="text-xl font-semibold">Pinned Repos</h1>
